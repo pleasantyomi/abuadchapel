@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+// import Confession from "@/components/confession";
 
 export default function AppLayout({
   children,
@@ -8,9 +9,10 @@ export default function AppLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
+    <main className="overflow-x-hidden ">
       <Nav />
-
+      {children}
+      {/* <Confession /> */}
       <Footer />
     </main>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { useSelectedLayoutSegments } from "next/navigation";
 import Link from "next/link";
@@ -8,16 +9,51 @@ const MobileNav = () => {
 
   const [open, setOpen] = useState(false);
   const [mediaHubOpen, setMediaHubOpen] = useState(false);
-  const genericHamburgerLine = `h-[2px] w-8 my-1 rounded-full bg-[#253887] transition ease transform duration-300`;
+  const genericHamburgerLine = `h-[3px] w-8 my-1 rounded-full bg-white transition ease transform duration-300`;
 
-  const handleMediaHubClick = () => {
-    setMediaHubOpen(!mediaHubOpen);
-  };
+  const navItems = [
+    {
+      name: "Home",
+      href: "/",
+      isActive: segments[0] === "home",
+    },
 
-  const closeDropdown = () => {
-    setMediaHubOpen(false);
-    setOpen(false);
-  };
+    {
+      name: "Who we are",
+      href: "/about",
+      isActive: segments[0] === "about",
+    },
+
+    {
+      name: "Units",
+      href: "/units",
+      isActive: segments[0] === "units",
+    },
+
+    {
+      name: "Events",
+      href: "/events",
+      isActive: segments[0] === "events",
+    },
+
+    {
+      name: "Resources",
+      href: "/resources",
+      isActive: segments[0] === "resources",
+    },
+
+    {
+      name: "Contact",
+      href: "/contact",
+      isActive: segments[0] === "contact",
+    },
+
+    {
+      name: "Give",
+      href: "/give",
+      isActive: segments[0] === "give",
+    },
+  ];
 
   return (
     <div>
@@ -47,95 +83,29 @@ const MobileNav = () => {
       </button>
 
       <div className={open ? "" : "hidden"}>
-        <div className="absolute left-1/2 z-[9999] mt-[1rem] grid h-auto w-11/12 -translate-x-1/2 justify-center justify-items-center gap-5 rounded-xl bg-[#253887] py-10 text-center font-[500]">
-          <Link
-            href="/"
-            className={cn(
-              "flex items-center text-lg",
-              segments[0] === undefined ? "text-[#959492]" : "text-[#ffff]",
-              "space-x-3 py-1.5 transition-all duration-150 ease-in-out hover:text-[#ffffff] active:text-[#ffffff]"
-            )}
-          >
-            <span className="font-inter text-sm" onClick={() => setOpen(!open)}>
-              Home
-            </span>
-          </Link>
-
-          <Link
-            href="/services"
-            className={cn(
-              "flex items-center text-lg",
-              segments[0] === "services" ? "text-[#959492]" : "text-[#ffff]",
-              "space-x-3 py-1.5 transition-all duration-150 ease-in-out hover:text-[#ffffff] active:text-[#ffffff]"
-            )}
-          >
-            <span className="font-inter text-sm" onClick={() => setOpen(!open)}>
-              Services
-            </span>
-          </Link>
-
-          <Link
-            href="/about-us"
-            className={cn(
-              "flex items-center text-lg",
-              segments[0] === "about" ? "text-[#959492]" : "text-[#ffff]",
-              "space-x-3 py-1.5 transition-all duration-150 ease-in-out hover:text-[#ffffff] active:text-[#ffffff]"
-            )}
-          >
-            <span className="font-inter text-sm" onClick={() => setOpen(!open)}>
-              About us
-            </span>
-          </Link>
-
-          <div className="relative w-full">
-            <button
-              className={cn(
-                "mx-auto flex items-end text-lg",
-                segments[0] === "media-hub" ? "text-[#ffff]" : "text-[#ffff]",
-                "space-x-1 py-1.5 transition-all duration-150 ease-in-out hover:text-[#ffffff] active:text-[#ffffff]"
-              )}
-              onClick={handleMediaHubClick}
-            >
-              <span className="font-inter text-sm">Media Hub</span>
-              size={18}
-              className=
-              {cn(
-                "transition-transform duration-150 ease-in-out",
-                mediaHubOpen ? "rotate-180 transform" : ""
-              )}
-            </button>
-            {mediaHubOpen && (
-              <div className="mt-2 w-full rounded-md bg-white shadow-lg">
-                <Link
-                  href="/media-hub"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  onClick={closeDropdown}
-                >
-                  Media Hub
-                </Link>
-                <Link
-                  href="/media-hub/all"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  onClick={closeDropdown}
-                >
-                  All Articles
-                </Link>
-              </div>
-            )}
+        <div className="absolute left-1/2 z-[9999] mt-[1rem] grid h-auto w-11/12 -translate-x-1/2 justify-center justify-items-center gap-5 rounded-xl bg-primary-DarkGreen py-10 text-center font-[500]">
+          <div className="grid gap-3 text-[18px] justify-normal">
+            {navItems.map(({ name, href, isActive }) => (
+              <Link
+                href={href}
+                key={name}
+                className={cn(
+                  "flex items-center px-1",
+                  "space-x-3 py-1.5 transition-all duration-150 ease-in-out text-center font-[500]"
+                )}
+              >
+                <span className="italic text-sm">{name}</span>
+              </Link>
+            ))}
           </div>
 
-          <Link
-            href="/contact-us"
-            className={cn(
-              "flex items-center text-lg",
-              segments[0] === "contact-us" ? "text-[#959492]" : "text-[#ffff]",
-              "space-x-3 py-1.5 transition-all duration-150 ease-in-out hover:text-[#ffffff] active:text-[#ffffff]"
-            )}
-          >
-            <span className="font-inter text-sm" onClick={() => setOpen(!open)}>
-              Contact us
-            </span>
-          </Link>
+          {/* <div className="">
+            <Link href="/give">
+              <button className="bg-white text-primary-DarkGreen -skew-x-12 rounded-full py-2 px-10 font-[500]">
+                Give
+              </button>
+            </Link>
+          </div> */}
         </div>
       </div>
     </div>

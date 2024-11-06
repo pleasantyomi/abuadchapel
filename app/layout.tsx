@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abuad Chapel",
+  title: "ABUAD CHAPEL",
   description:
-    "New generation Abuad chapel. We are Godly and Purpose driven youths.",
+    "New generation ABUAD CHAPEL. We are Godly and Purpose driven youths.",
   icons: {
     icon: [
       {

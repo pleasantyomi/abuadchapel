@@ -11,6 +11,24 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          DarkGreen: "#013220",
+          White: "#FFFFFF",
+          LightGreen: "#809990",
+          Black: "#191919",
+          Stone: "#D9D9D9",
+        },
+      },
+
+      backgroundImage: {
+        blackBackground: "url('/images/black-concrete-wall.jpg')",
+        greenBackground: "url('/images/old-green-paper.jpg')",
+        whiteBackground: "url('/images/watercolor-paper-texture.jpg')",
+        imageBg : "url('/images/hero.jpg')",
+      },
+
+      fontFamily: {
+        ZonaPro: ["ZonaPro", "sans-serif"],
       },
     },
   },
