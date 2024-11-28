@@ -33,7 +33,7 @@ export default function Footer() {
     },
   ];
 
-  const currentYear = new Date().getFullYear;
+  const currentYear = new Date().getFullYear();
   return (
     <div className="bg-primary-Black ">
       <div className="py-10 w-[90vw] mx-auto lg:flex lg:justify-between grid gap-10 items-center">
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <Line />
+      <Line className="" />
 
       <div className="flex justify-between items-center w-[90vw] mx-auto  py-5 ">
         <div>
@@ -113,6 +113,15 @@ export default function Footer() {
             <Youtube size={16} />
           </Link>
         </div>
+      </div>
+
+      <div>
+        <p className="text-white text-center text-[12px] font-ZonaPro font-extralight pb-5 tracking-wider">
+          Designed and developed by{" "}
+          <Link className="underline" href="/">
+            Pleasant Yomi
+          </Link>
+        </p>
       </div>
     </div>
   );
