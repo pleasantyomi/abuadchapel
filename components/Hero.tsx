@@ -24,7 +24,7 @@ export default function Hero() {
               We are here to end loneliness and connect you to people.
             </p>
 
-            <Link className="relative w-full" href="/">
+            <Link className="relative w-full" href="/about">
               <PrimaryButton
                 text="LEARN MORE"
                 className="lg:text-base text-sm"

@@ -1,4 +1,9 @@
-export default function PrimaryButton({ className, text }) {
+interface PrimaryButtonProps {
+  className?: string;
+  text: string;
+}
+
+export default function PrimaryButton({ className, text }: PrimaryButtonProps) {
   return (
     <div>
       <div className="relative w-full">

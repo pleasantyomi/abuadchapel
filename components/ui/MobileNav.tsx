@@ -27,7 +27,7 @@ const MobileNav = () => {
     {
       name: "Units",
       href: "/units",
-      isActive: segments[0] === "units",
+      isActive: segments[0] === "/about/units",
     },
 
     {
@@ -58,6 +58,7 @@ const MobileNav = () => {
   return (
     <div>
       <button
+        aria-label="Toggle navigation"
         className="group flex h-12 w-12 flex-col items-center justify-center"
         onClick={() => setOpen(!open)}
       >
@@ -84,28 +85,13 @@ const MobileNav = () => {
 
       <div className={open ? "" : "hidden"}>
         <div className="absolute left-1/2 z-[9999] mt-[1rem] grid h-auto w-11/12 -translate-x-1/2 justify-center justify-items-center gap-5 rounded-xl bg-primary-DarkGreen py-10 text-center font-[500]">
-          <div className="grid gap-3 text-[18px] justify-normal">
+          <div className="grid gap-5">
             {navItems.map(({ name, href, isActive }) => (
-              <Link
-                href={href}
-                key={name}
-                className={cn(
-                  "flex items-center px-1",
-                  "space-x-3 py-1.5 transition-all duration-150 ease-in-out text-center font-[500]"
-                )}
-              >
-                <span className="italic text-sm">{name}</span>
+              <Link href={href} key={name}>
+                <span className="text-base text-center">{name}</span>
               </Link>
             ))}
           </div>
-
-          {/* <div className="">
-            <Link href="/give">
-              <button className="bg-white text-primary-DarkGreen -skew-x-12 rounded-full py-2 px-10 font-[500]">
-                Give
-              </button>
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>

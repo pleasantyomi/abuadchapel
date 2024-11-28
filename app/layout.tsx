@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/components/ui/Footer";
+import Nav from "@/components/ui/Nav";
 
 export const metadata: Metadata = {
   title: "ABUAD CHAPEL",
@@ -32,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
+      <body className="bg-white overflow-x-hidden">
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

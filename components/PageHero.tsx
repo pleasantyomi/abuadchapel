@@ -1,6 +1,9 @@
 // import Image from "next/image";
+interface PageHeroProps {
+  heroText: string;
+}
 
-export default function PageHero({ heroText }) {
+export default function PageHero({ heroText }: PageHeroProps) {
   return (
     <div className="relative bg-greenBackground w-screen lg:h-[60vh] h-[35vh]">
       <div className="lg:w-[80vw] w-[90vw] mx-auto">

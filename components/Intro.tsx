@@ -1,4 +1,4 @@
-import ImageIcon from "./ImageIcon";
+import ImageIcon from "@/components/ui/ImageIcon";
 import Image from "next/image";
 
 export default function Intro() {

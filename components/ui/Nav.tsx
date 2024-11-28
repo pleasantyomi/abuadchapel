@@ -35,7 +35,7 @@ const Nav = () => {
 
     {
       name: "Units",
-      href: "/units",
+      href: "/about/units",
       isActive: segments[0] === "units",
     },
 
@@ -66,7 +66,7 @@ const Nav = () => {
 
   return (
     <div
-      className={`fixed w-full z-20 py-4b ${
+      className={`fixed w-full z-20 py-4 ${
         isScrolled ? "bg-black/50 backdrop-blur-lg" : "bg-transparent"
       }`}
     >
@@ -102,14 +102,6 @@ const Nav = () => {
             </Link>
           ))}
         </div>
-
-        {/* <div className="hidden lg:block">
-          <Link href="/give">
-            <button className="bg-primary-DarkGreen -skew-x-12 py-2 px-10 ">
-              Give
-            </button>
-          </Link>
-        </div> */}
 
         <div className="block lg:hidden">
           <MobileNav />

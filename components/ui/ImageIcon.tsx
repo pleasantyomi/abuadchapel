@@ -1,4 +1,8 @@
-export default function ImageIcon({ className }) {
+interface ImageIconProps {
+  className?: string;
+}
+
+export default function ImageIcon({ className }: ImageIconProps) {
   return (
     <div className={`${className}`}>
       <div className="relative">

@@ -1,6 +1,6 @@
 "use client";
 
-import Line from "./ui/line";
+import Line from "./line";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
@@ -29,7 +29,7 @@ export default function Footer() {
 
     {
       name: "Units",
-      href: "/units",
+      href: "/about/units",
     },
   ];
 

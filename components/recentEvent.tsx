@@ -1,26 +1,18 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { MoveRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function HomeEvents() {
+export default function RecentEvent() {
   const EventList = [
     {
       flyer: "/images/hero.jpg",
       title: "Tongues of fire",
-      date: "10 nov 2024 - 27 nov 2024",
-    },
-
-    {
-      flyer: "/images/hero.jpg",
-      title: "Prayer walk",
-      date: "10 dec 2024 - 27 dec 2024",
+      date: "10 nov 2024 - 27 nov 2024 -6:30 pm",
     },
   ];
-
   const calculateTimeLeft = (eventDate: string) => {
     const difference = new Date(eventDate).getTime() - new Date().getTime();
 
@@ -51,42 +43,26 @@ export default function HomeEvents() {
   }, []);
 
   return (
-    <div>
-      <div className="bg-primary-Black w-full py-10">
-        <div>
-          <h1 className="grid text-center uppercase">
-            <span className="font-[200] text-green-400 pb-2">
-              Upcoming events
-            </span>
-            <span className="font-semibold lg:text-2xl text-xl">
-              Events curated to help
-              <br />
-              your christian journey
-            </span>
-          </h1>
-        </div>
+    <div className="bg-gray-100 w-full h-fit py-14">
+      <div className="w-11/12 mx-auto">
+        <h1 className="uppercase font-semibold text-3xl text-black pb-8">
+          upcoming event
+        </h1>
+        <div className="w-full mx-auto lg:flex grid lg:items-center lg:gap-14 gap-8">
+          <div className="lg:w-7/12 w-full">
+            <Image
+              src="/images/hero.jpg"
+              alt="Image"
+              width={750}
+              height={750}
+              className="w-full lg:h-[60vh] h-[45vh] rounded-xl  object-cover object-center flex-shrink-0 flex-nowrap"
+            />
+          </div>
 
-        <div className="w-11/12 mx-auto lg:py-16 py-10">
-          <div className="grid lg:grid-cols-2 lg:gap-10 gap-6">
-            {EventList.map((event, index) => (
-              <div key={index} className="lg:flex grid lg:gap-4 gap-3">
-                <Image
-                  src={event.flyer}
-                  alt={event.title}
-                  width={750}
-                  height={750}
-                  className="rounded-2xl lg:w-6/12 w-full h-[40vh] object-cover flex-shrink-0 flex-nowrap transition-all duration-300 hover:shadow-black hover:shadow-md cursor-pointer"
-                />
-
-                <div className="w-full">
-                  <h1 className="lg:text-2xl text-xl font-[100] uppercase pb-2">
-                    {event.title}
-                  </h1>
-
-                  <p className="lg:text-base text-sm font-[100] uppercase pb-3">
-                    {event.date}
-                  </p>
-
+          <div>
+            <div className="w-auto">
+              {EventList.map((event, index) => (
+                <div key={index}>
                   <div className="grid grid-cols-4 justify-between pb-3 gap-2">
                     <div className="bg-green-200 p-2 lg:rounded-lg rounded-md">
                       <p className="text-sm font-semibold text-green-900 grid gap-1 text-center">
@@ -125,25 +101,24 @@ export default function HomeEvents() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-green-500">
-                    <p className="text-sm uppercase">View details</p>
-                    <MoveRight />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+                  <p className="lg:text-base text-xl font-[100] uppercase pb-2 text-gray-400">
+                    {event.date}
+                  </p>
 
-        <div className="flex items-center justify-center lg:gap-3 gap-2">
-          <p className="lg:text-base text-sm">View all upcoming events</p>
-          <Link
-            href="/events"
-            className="flex items-center gap-2 text-green-500 border-[1px] border-green-500 rounded-full lg:py-3 py-2 px-3 lg:px-4"
-          >
-            <span className="lg:text-base text-sm">ALL EVENTS</span>
-            <MoveRight />
-          </Link>
+                  <h1 className="lg:text-2xl text-3xl font-[300] uppercase pb-2 text-black">
+                    {event.title}
+                  </h1>
+
+                  <Link href="/events">
+                    <div className="flex items-center gap-2 text-green-500">
+                      <p className="text-md uppercase">View details</p>
+                      <MoveRight />
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
