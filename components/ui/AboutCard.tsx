@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 

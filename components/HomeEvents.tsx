@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -40,7 +42,7 @@ export default function HomeEvents() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const times: { [key: string]: any } = {};
+      const times: { [key: string]: unknown } = {};
       EventList.forEach((event, index) => {
         times[index] = calculateTimeLeft(event.date.split("-")[0]);
       });

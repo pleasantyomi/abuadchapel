@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import PrimaryButton from "./ui/PrimaryButton";
-import { MoveUpRight } from "lucide-react";
 
 export default function Hero() {
   return (

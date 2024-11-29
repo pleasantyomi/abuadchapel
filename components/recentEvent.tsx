@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
@@ -32,7 +34,7 @@ export default function RecentEvent() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const times: { [key: string]: any } = {};
+      const times: { [key: string]: unknown } = {};
       EventList.forEach((event, index) => {
         times[index] = calculateTimeLeft(event.date.split("-")[0]);
       });
