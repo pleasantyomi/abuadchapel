@@ -10,7 +10,7 @@ const AnyReactComponent = ({ text }: { text: string }) => <div>{text}</div>;
 
 const Map: FC<MapProps> = ({ className }) => {
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%" }} className="mt-10 lg:mt-14">
       <iframe
         title="AFE Babalola University Map"
         src="https://www.google.com/maps/search/A+F+E+Babalola+University/@7.6708843,5.2308819,13z?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
@@ -20,7 +20,7 @@ const Map: FC<MapProps> = ({ className }) => {
         loading="lazy"
         className={cn(className)}
       ></iframe>
-    </div>  
+    </div>
   );
 };
 

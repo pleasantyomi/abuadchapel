@@ -1,7 +1,6 @@
 import EventCard from "@/components/ui/eventCard";
 import Line from "@/components/ui/line";
 import RecentEvent from "@/components/recentEvent";
-import EventDetails from "@/components/ui/eventDetails";
 
 export default function Event() {
   const eventList = [
@@ -32,7 +31,7 @@ export default function Event() {
         <RecentEvent />
       </div>
 
-      <div className="w-11/12 mx-auto py-20">
+      <div className="w-11/12 mx-auto pt-10">
         <div className="flex lg:gap-4 gap-2 items-center pb-8">
           <h1 className="text-gray-800 flex-shrink-0 flex-nowrap">
             December 2024
@@ -40,7 +39,7 @@ export default function Event() {
           <Line className="bg-gray-700" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-8">
           {eventList.map((list) => (
             <div key={list.id}>
               <EventCard
@@ -50,10 +49,6 @@ export default function Event() {
               />
             </div>
           ))}
-        </div>
-
-        <div className="hidden">
-          <EventDetails />
         </div>
       </div>
     </>

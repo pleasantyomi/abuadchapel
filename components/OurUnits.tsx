@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import UnitCard from "./ui/unitCard";
-import UnitDetails from "@/components/ui/unitDetails";
 import { useState } from "react";
-import Image from "next/image";
 
 export default function OurUnits() {
   const [ChapelUnits, setChapelUnits] = useState([
@@ -28,17 +26,13 @@ export default function OurUnits() {
 
   return (
     <>
-      <div className="py-10 w-11/12 mx-auto">
-        <div className="lg:grid lg:grid-cols-3 justify-center gap-10">
+      <div className="w-11/12 mx-auto">
+        <div className="grid lg:grid-cols-3 justify-center lg:gap-10 gap-8">
           {ChapelUnits.map((unit) => (
             <div key={unit.id}>
               <UnitCard unitName={unit.name} details={unit.details} />
             </div>
           ))}
-        </div>
-
-        <div className="hidden">
-           <UnitDetails/>
         </div>
       </div>
     </>

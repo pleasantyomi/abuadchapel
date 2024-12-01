@@ -15,7 +15,7 @@ export default function UnitCard({
   return (
     <>
       <div
-        className={`${className} bg-imageBg lg:h-[60vh] h-[40vh] w-full rounded-3xl relative overflow-hidden transition-all duration-300 group`}
+        className={`${className} bg-imageBg lg:h-[60vh] h-[40vh] w-full rounded-3xl relative overflow-hidden transition-all duration-300 group cursor-pointer`}
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",

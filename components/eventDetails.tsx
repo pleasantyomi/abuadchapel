@@ -44,7 +44,7 @@ export default function EventDetails() {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto grid lg:gap-8 gap-5 lg:py-20 py-14">
+    <div className="w-11/12 mx-auto grid lg:gap-8 gap-5 lg:py-20">
       <div className="w-full mx-auto lg:flex grid lg:items-center lg:gap-14 gap-8">
         <div className="lg:w-7/12 w-full">
           <Image

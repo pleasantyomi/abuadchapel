@@ -6,7 +6,7 @@ import Weekly from "@/components/Weekly";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden lg:pb-16 pb-12">
       <Hero />
       <Intro />
       <HomeEvents />

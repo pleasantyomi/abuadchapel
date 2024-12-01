@@ -11,7 +11,7 @@ interface EventCardProps {
 export default function EventCard({ flyer, title, date }: EventCardProps) {
   return (
     <div>
-      <div className="w-full grid">
+      <div className="w-full grid cursor-pointer">
         <div>
           <Image
             src={flyer}

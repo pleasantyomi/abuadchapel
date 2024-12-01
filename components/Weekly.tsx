@@ -23,7 +23,7 @@ export default function Weekly() {
   ];
 
   return (
-    <div className="w-11/12 mx-auto h-full bg-imageBg bg-center bg-black bg-opacity-50 bg-blend-darken lg:rounded-[50px] rounded-[40px] my-14 py-10  lg:px-14 px-5">
+    <div className="w-11/12 mx-auto h-full bg-imageBg bg-center bg-black bg-opacity-50 bg-blend-darken lg:rounded-[50px] rounded-[40px] py-10 lg:mt-20 mt-14 lg:px-14 px-5">
       <div className="lg:flex lg:gap-16 grid gap-8">
         <div className="lg:w-fit lg:flex-shrink-0 lg:flex-nowrap">
           <h1 className="uppercase font-bold lg:text-[2.2rem] text-xl lg:text-left text-center leading-tight">

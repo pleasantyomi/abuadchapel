@@ -118,9 +118,10 @@ export default function Footer() {
       <div>
         <p className="text-white text-center text-[12px] font-ZonaPro font-extralight pb-5 tracking-wider">
           Designed and developed by{" "}
-          <Link className="underline" href="/">
+          <Link className="underline" href="https://wa.me/07040354205">
             Pleasant Yomi
           </Link>
+          .
         </p>
       </div>
     </div>

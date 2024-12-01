@@ -20,7 +20,7 @@ export default function AboutCard({
   return (
     <div>
       <div
-        className={`${className} bg-imageBg lg:h-[60vh] h-[40vh] w-full rounded-3xl relative overflow-hidden transition-all duration-300 group`}
+        className={`${className} bg-imageBg lg:h-[60vh] h-[40vh] w-full rounded-3xl relative overflow-hidden transition-all duration-300 group cursor-pointer`}
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -34,7 +34,7 @@ export default function AboutCard({
               {details}
             </p>
           )}
-          <Link href="/{route}">
+          <Link href={`/${route}`}>
             <span className="uppercase flex items-center gap-2 group-hover:text-green-300 py-1 transition-all duration-300">
               view details
               <MoveRight />

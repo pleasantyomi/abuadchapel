@@ -1,20 +1,13 @@
 import ContactUS from "@/components/ContactUs";
 import Map from "@/components/Map";
-import PageHero from "@/components/PageHero";
+import PageHero from "@/components/ui/PageHero";
 
 export default function Contact() {
   return (
-  <div>
-    <div>
-      <PageHero heroText="Contact Us"/>
+    <div className="">
+      <PageHero heroText="Contact Us" className="lg:mb-16 mb-12" />
+      <ContactUS />
+      <Map className="bg-stone-100 w-full" />
     </div>
-
-    <div className="pt-10 pb-14">
-      <ContactUS/>
-    </div>
-
-    <Map className="bg-stone-100 w-full"/>
-  </div>
-  )
+  );
 }
-

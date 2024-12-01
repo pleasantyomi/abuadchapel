@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useSelectedLayoutSegments } from "next/navigation";
+// import { useSelectedLayoutSegments } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import MobileNav from "./MobileNav";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
-  const segments = useSelectedLayoutSegments();
+  // const segments = useSelectedLayoutSegments();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,47 +21,43 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const pathname = usePathname();
+
   const navItems = [
     {
       name: "Home",
       href: "/",
-      isActive: segments[0] === "home",
+      isActive: pathname === "/",
     },
-
     {
       name: "Who we are",
       href: "/about",
-      isActive: segments[0] === "about",
+      isActive: pathname === "/about",
     },
-
     {
       name: "Units",
       href: "/about/units",
-      isActive: segments[0] === "units",
+      isActive: pathname === "/about/units",
     },
-
     {
       name: "Events",
       href: "/events",
-      isActive: segments[0] === "events",
+      isActive: pathname === "/events",
     },
-
     {
       name: "Resources",
       href: "/resources",
-      isActive: segments[0] === "resources",
+      isActive: pathname === "/resources",
     },
-
     {
       name: "Contact",
       href: "/contact",
-      isActive: segments[0] === "contact",
+      isActive: pathname === "/contact",
     },
-
     {
       name: "Give",
       href: "/give",
-      isActive: segments[0] === "give",
+      isActive: pathname === "/give",
     },
   ];
 
@@ -93,9 +90,8 @@ const Nav = () => {
               href={href}
               key={name}
               className={cn(
-                "flex items-center px-1",
-                isActive ? "" : "",
-                "space-x-3 py-1.5 transition-all duration-150 ease-in-out"
+                "flex items-center px-1 space-x-3 py-1.5 transition-all duration-150 ease-in-out",
+                isActive ? "border-b-[1px] border-b-white" : ""
               )}
             >
               <span className="text-sm">{name}</span>
