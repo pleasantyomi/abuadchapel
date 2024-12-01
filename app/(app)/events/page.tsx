@@ -1,5 +1,11 @@
 import PageHero from "@/components/ui/PageHero";
 import Event from "@/components/events";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Events - ABUAD CHAPEL"
+}
 
 export default function Events() {
   return (

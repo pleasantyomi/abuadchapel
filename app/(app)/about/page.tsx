@@ -1,6 +1,12 @@
 import PageHero from "@/components/ui/PageHero";
 import Weekly from "@/components/Weekly";
 import AboutUs from "@/components/aboutUs";
+import { Metadata } from "next";
+
+
+export const metadata : Metadata ={
+  title: "About - ABUAD CHAPEL"
+}
 
 export default function About() {
   return (

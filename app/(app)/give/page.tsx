@@ -1,6 +1,11 @@
 import PageHero from "@/components/ui/PageHero";
 import Weekly from "@/components/Weekly";
 import GiveCard from "@/components/giveCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Give - ABUAD CHAPEL"
+}
 
 export default function Give() {
   return (

@@ -1,6 +1,11 @@
 import ContactUS from "@/components/ContactUs";
 import Map from "@/components/Map";
 import PageHero from "@/components/ui/PageHero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact us - ABUAD CHAPEL",
+};
 
 export default function Contact() {
   return (

@@ -1,5 +1,10 @@
 import PageHero from "@/components/ui/PageHero";
 import OurUnits from "@/components/OurUnits";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Units - ABUAD CHAPEL"
+}
 
 export default function Units() {
   return (

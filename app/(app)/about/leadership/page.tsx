@@ -1,6 +1,10 @@
 import PageHero from "@/components/ui/PageHero";
 import Weekly from "@/components/Weekly";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Our Leadership - ABUAD CHAPEL"
+}
 export default function Leadership() {
   return (
     <>
